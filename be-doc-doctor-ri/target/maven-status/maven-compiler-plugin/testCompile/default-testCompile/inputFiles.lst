@@ -1,0 +1,12 @@
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/admin/application/usecase/AdminCatalogServiceTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/appointment/AppointmentIntegrationIT.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/appointment/domain/BookingPolicyTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/appointment/domain/ResourceBookingOverlapCheckerTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/auth/application/AuthServiceTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/auth/infrastructure/security/JwtServiceTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/notification/application/NotificationOutboxProcessorTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/queue/domain/QueuePriorityPolicyTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/queue/domain/QueueStatusMachineTransitionTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/resource/domain/ResourceOverlapTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/resource/infrastructure/lock/SlotHoldConcurrencyTest.java
+/Users/hieu.bui/Documents/doctor/be-doc-doctor-ri/src/test/java/com/doctorri/clinic/support/IntegrationContainers.java

@@ -1,0 +1,159 @@
+.page {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgShape1,
+.bgShape2,
+.bgShape3 {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bgShape1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(91, 154, 136, 0.15) 0%, transparent 70%);
+  top: -150px;
+  right: -100px;
+  animation: float 10s ease-in-out infinite;
+}
+
+.bgShape2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(232, 180, 184, 0.25) 0%, transparent 70%);
+  bottom: 10%;
+  left: -80px;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.bgShape3 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(212, 237, 228, 0.5) 0%, transparent 70%);
+  top: 40%;
+  right: 15%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.header {
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.logoMark {
+  font-size: 1.5rem;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-sage);
+  font-size: 1.125rem;
+}
+
+.hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem 5rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-blush-deep);
+  margin: 0 0 1rem;
+}
+
+.brandHero {
+  font-size: clamp(3.5rem, 10vw, 5.5rem);
+  font-weight: 700;
+  color: var(--color-sage);
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 3vw, 1.625rem);
+  color: var(--color-text);
+  margin: 0 0 1.25rem;
+  line-height: 1.45;
+}
+
+.support {
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaGroup a {
+  text-decoration: none;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.feature {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.feature h3 {
+  font-size: 1.125rem;
+  color: var(--color-sage);
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 2.5rem 1.5rem 3.5rem;
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

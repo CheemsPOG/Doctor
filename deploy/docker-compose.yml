@@ -1,0 +1,100 @@
+# Doctor Ri — local full stack on Mac (Docker)
+# Usage (from this folder):
+#   docker compose up -d --build
+# Open: http://localhost:8088
+#
+# Services:
+#   web   → FE (nginx :8088)  proxies /api → api
+#   api   → Spring Boot :8080
+#   mysql → MySQL 8
+#   redis → Redis 7
+
+name: doctor-ri
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: doctor-ri-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
+      MYSQL_DATABASE: ${MYSQL_SCHEMA:-db_clinic}
+      TZ: Asia/Ho_Chi_Minh
+    ports:
+      - "${MYSQL_PUBLISH_PORT:-3307}:3306"
+    volumes:
+      - doctor_ri_mysql:/var/lib/mysql
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --default-time-zone=+07:00
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-p${MYSQL_ROOT_PASSWORD:-123456}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    container_name: doctor-ri-redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PUBLISH_PORT:-6380}:6379"
+    volumes:
+      - doctor_ri_redis:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    build:
+      context: ../be-doc-doctor-ri
+      dockerfile: Dockerfile
+    container_name: doctor-ri-api
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      TZ: Asia/Ho_Chi_Minh
+      PORT: "8080"
+      MYSQL_HOST: mysql
+      MYSQL_PORT: "3306"
+      MYSQL_SCHEMA: ${MYSQL_SCHEMA:-db_clinic}
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-123456}
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+      JWT_SECRET: ${JWT_SECRET:-doctor-ri-local-docker-secret-change-me-32b}
+      CORS_ALLOWED_ORIGINS: ${CORS_ALLOWED_ORIGINS:-http://localhost:8088,http://127.0.0.1:8088,http://localhost:5173}
+      PUSH_PROVIDER: STUB
+    ports:
+      - "${API_PUBLISH_PORT:-8080}:8080"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+
+  web:
+    build:
+      context: ../fe-doc-doctor-ri
+      dockerfile: Dockerfile
+      args:
+        VITE_API_BASE_URL: /api/v1
+    container_name: doctor-ri-web
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "${WEB_PUBLISH_PORT:-8088}:80"
+
+volumes:
+  doctor_ri_mysql:
+  doctor_ri_redis:

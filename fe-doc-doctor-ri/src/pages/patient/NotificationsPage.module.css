@@ -1,0 +1,72 @@
+.page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-sage);
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.itemHeader time {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.unread {
+  color: var(--color-sage);
+}
+
+.read {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.content {
+  margin: 0 0 0.75rem;
+}
+
+.empty,
+.error {
+  margin: 0;
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.settingsHint {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.settingsHint a {
+  font-weight: 600;
+  color: var(--color-sage);
+}

@@ -1,0 +1,54 @@
+.page {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 640px;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-sage);
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.select {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.select span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.select select {
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font: inherit;
+}
+
+.slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.error {
+  color: var(--color-error);
+  margin: 0;
+}
+
+.success {
+  color: var(--color-success);
+  margin: 0;
+}

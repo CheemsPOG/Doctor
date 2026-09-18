@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Doctor Ri">
+  <rect width="64" height="64" rx="14" fill="#3d7a6a"/>
+  <path fill="#ffffff" d="M32 14c1.2 6.5 5.8 11.4 12 13.2-6.2 1.8-10.8 6.7-12 13.2-1.2-6.5-5.8-11.4-12-13.2C26.2 25.4 30.8 20.5 32 14z"/>
+  <circle cx="32" cy="44" r="3.2" fill="#e8f3ef"/>
+</svg>

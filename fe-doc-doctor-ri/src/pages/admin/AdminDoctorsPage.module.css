@@ -1,0 +1,103 @@
+.page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-sage);
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.section {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--color-sage);
+}
+
+.sub {
+  margin: 1.25rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  align-items: end;
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.meta {
+  margin: 0.25rem 0 0.5rem;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.check {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.schedules {
+  margin: 0 0 1rem;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.schedules li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.select {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.select span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.select select {
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font: inherit;
+}
+
+.error {
+  color: var(--color-error);
+}

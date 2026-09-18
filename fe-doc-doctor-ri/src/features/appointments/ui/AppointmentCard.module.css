@@ -1,0 +1,81 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.status {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.held,
+.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.confirmed,
+.attendanceconfirmed {
+  background: var(--color-sage-muted);
+  color: var(--color-sage);
+}
+
+.cancelled,
+.noshow {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.completed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.time {
+  font-size: 1.5rem;
+  color: var(--color-sage);
+  margin-bottom: 0.75rem;
+}
+
+.detail {
+  margin: 0.25rem 0;
+  font-size: 0.9375rem;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.reason {
+  margin: 0.75rem 0 0;
+  padding: 0.75rem;
+  background: var(--color-mint);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.note {
+  margin: 1rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}

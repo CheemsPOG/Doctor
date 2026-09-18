@@ -1,0 +1,13 @@
+com/doctorri/clinic/notification/application/NotificationOutboxProcessorTest.class
+com/doctorri/clinic/queue/domain/QueueStatusMachineTransitionTest.class
+com/doctorri/clinic/appointment/domain/BookingPolicyTest.class
+com/doctorri/clinic/appointment/AppointmentIntegrationIT$Registered.class
+com/doctorri/clinic/auth/infrastructure/security/JwtServiceTest.class
+com/doctorri/clinic/auth/application/AuthServiceTest.class
+com/doctorri/clinic/support/IntegrationContainers.class
+com/doctorri/clinic/admin/application/usecase/AdminCatalogServiceTest.class
+com/doctorri/clinic/queue/domain/QueuePriorityPolicyTest.class
+com/doctorri/clinic/resource/infrastructure/lock/SlotHoldConcurrencyTest.class
+com/doctorri/clinic/appointment/AppointmentIntegrationIT.class
+com/doctorri/clinic/appointment/domain/ResourceBookingOverlapCheckerTest.class
+com/doctorri/clinic/resource/domain/ResourceOverlapTest.class

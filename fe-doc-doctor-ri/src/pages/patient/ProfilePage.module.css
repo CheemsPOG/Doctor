@@ -1,0 +1,40 @@
+.page {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 560px;
+}
+
+.header {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-sage);
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.error {
+  color: var(--color-error);
+  margin: 0;
+}
+
+.success {
+  color: var(--color-success);
+  margin: 0;
+}

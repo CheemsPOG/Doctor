@@ -1,0 +1,11 @@
+# Optional Railway service config for be-doc-doctor-ri
+# In Railway UI: Root Directory = be-doc-doctor-ri, Dockerfile path = Dockerfile
+
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+healthcheckPath = "/actuator/health"
+healthcheckTimeout = 120
+restartPolicyType = "ON_FAILURE"

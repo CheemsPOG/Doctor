@@ -1,0 +1,83 @@
+.page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-sage);
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0.35rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.section {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--color-sage);
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: end;
+}
+
+.check {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  padding-bottom: 0.4rem;
+}
+
+.textareaField {
+  display: grid;
+  gap: 0.35rem;
+  grid-column: 1 / -1;
+}
+
+.textareaField span {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.textareaField textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+  resize: vertical;
+  min-height: 96px;
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.meta {
+  margin: 0.25rem 0 0;
+  color: var(--color-text-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.error {
+  color: var(--color-error);
+  margin: 0.75rem 0 0;
+}
